@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prevención de Suplantación de Identidad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #005f73;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      background-color: #0a9396;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      background-color: #94d2bd;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #ee9b00;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      color: #005f73;
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #005f73;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Prevención de Suplantación de Identidad</h1>
+  </header>
+
+  <nav>
+    <a href="#chatbot">ChatBot</a>
+    <a href="#videos">Videos</a>
+    <a href="#victima">¿Qué hacer?</a>
+    <a href="#noticias">Noticias</a>
+    <a href="#proteger">Protección</a>
+    <a href="#phishing">Phishing</a>
+    <a href="#tipos">Tipos</a>
+    <a href="#advertencias">Señales</a>
+    <a href="#estadisticas">Estadísticas</a>
+  </nav>
+
+  <section id="chatbot">
+    <h2 class="section-title">ChatBot</h2>
+    <div class="card">
+      <p>En desarrollo: un chatbot interactivo para ayudarte a detectar suplantación de identidad.</p>
+    </div>
+  </section>
+
+  <section id="videos">
+    <h2 class="section-title">Videos Educativos</h2>
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/S2QLpGd0gZc" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="victima">
+    <h2 class="section-title">¿Qué hacer si eres víctima?</h2>
+    <div class="card">
+      <ul>
+        <li>Cambia tus contraseñas inmediatamente.</li>
+        <li>Informa a tu banco o proveedor de servicios.</li>
+        <li>Denuncia a las autoridades competentes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="noticias">
+    <h2 class="section-title">Noticias</h2>
+    <div class="card">
+      <p>Noticias recientes sobre suplantación de identidad aparecerán aquí.</p>
+    </div>
+  </section>
+
+  <section id="proteger">
+    <h2 class="section-title">Protege tu información</h2>
+    <div class="card">
+      <p>Utiliza contraseñas fuertes, activa la verificación en dos pasos y no compartas información sensible.</p>
+    </div>
+  </section>
+
+  <section id="phishing">
+    <h2 class="section-title">Protección frente al Phishing</h2>
+    <div class="card">
+      <p>Evita hacer clic en enlaces sospechosos. Verifica siempre la dirección del remitente.</p>
+    </div>
+  </section>
+
+  <section id="tipos">
+    <h2 class="section-title">Tipos de suplantación</h2>
+    <div class="card">
+      <ul>
+        <li>Suplantación en redes sociales</li>
+        <li>Suplantación financiera</li>
+        <li>Suplantación física (documentos falsos)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="advertencias">
+    <h2 class="section-title">Señales de advertencia</h2>
+    <div class="card">
+      <ul>
+        <li>Accesos inusuales a tus cuentas</li>
+        <li>Mensajes sospechosos de amigos o instituciones</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="estadisticas">
+    <h2 class="section-title">Gráfico de Estadísticas</h2>
+    <div class="card">
+      <canvas id="chart" width="400" height="200"></canvas>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Prevención de Suplantación de Identidad</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('chart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['2020', '2021', '2022', '2023', '2024'],
+        datasets: [{
+          label: 'Denuncias por año',
+          data: [120, 190, 300, 450, 520],
+          backgroundColor: '#0a9396'
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
