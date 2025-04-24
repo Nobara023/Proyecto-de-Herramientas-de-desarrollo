@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  header {
+    background: url('https://images.unsplash.com/photo-1601933470928-c84f6f8f1b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding-bottom: 50px;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+  }
+  
+  .quick-exit {
+    background-color: #e30c2f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .right-options a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+  }
+  
+  nav .logo {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 30px;
+    background-color: white;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -60px;
+  }
+  
+  .blue { background-color: #00a7e1; color: white; }
+  .green { background-color: #00c3a5; color: white; }
+  .purple { background-color: #6f2da8; color: white; }
+  
+  .blue-text { color: #00a7e1; }
+  .green-text { color: #00c3a5; }
+  .purple-text { color: #6f2da8; }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s;
+  }
+  
+  .blue-btn {
+    background-color: #00a7e1;
+    color: white;
+  }
+  
+  .green-btn {
+    background-color: #00c3a5;
+    color: white;
+  }
+  
+  .purple-btn {
+    background-color: #6f2da8;
+    color: white;
+  }
+  
