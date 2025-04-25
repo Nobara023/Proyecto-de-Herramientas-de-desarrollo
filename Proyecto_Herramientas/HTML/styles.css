@@ -411,31 +411,3 @@ header {
 }
 
 
-/*adicionales*/
-.custom-card {
-  background: rgba(255, 255, 255, 0.75);
-  border: none;
-  border-radius: 2rem;
-  padding: 2.5rem 2rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.custom-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
-.card-icon {
-  font-size: 3rem;
-}
-
-.cta-button {
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #c82333;
-  transform: scale(1.05);
-}
