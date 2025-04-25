@@ -7,7 +7,7 @@ body {
 
 .video-container {
   position: relative;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
 }
 
@@ -77,12 +77,11 @@ header {
   gap: 30px;
   padding: 50px 30px;
   background-color: transparent;
-  position: absolute;
-  top: 50vh; /* <- Esto las sube hacia el video */
-  left: 0;
-  width: 100%;
+  margin-top: -130px; /* hace que suban visualmente */
   z-index: 50;
+  position: relative;
 }
+
 
 .cards {
   display: flex;
@@ -150,4 +149,293 @@ header {
 .purple-btn {
   background-color: #6f2da8;
   color: white;
+}
+
+
+/*sesiones*/
+.podcast-section {
+  background-color: #0057b8; /* azul fuerte como en la imagen */
+  padding: 80px 20px;
+  color: white;
+}
+
+.container-podcast {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.podcast-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.podcast-left h1 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.podcast-left p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.button-podcast {
+  background: #00a8ff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.button-podcast:hover {
+  background: #0097e6;
+}
+
+.podcast-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.podcast-card {
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.podcast-card:hover {
+  transform: translateY(-5px);
+}
+
+.podcast-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.text-content h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.meta {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.text-content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/*seccion de noticias*/
+
+.alertas-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+
+.alertas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.alertas-header h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.alertas-header a {
+  font-size: 14px;
+  color: #001f3f;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #007acc;
+}
+
+.alertas-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.alerta-card {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.alerta-image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.alerta-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #0592cf, #0076d1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  height: 180px;
+  text-align: center;
+}
+
+.alerta-content {
+  padding: 16px;
+}
+
+.alerta-content .meta {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.alerta-content p, .alerta-content h4 {
+  font-size: 14px;
+  color: #333;
+}
+
+
+/*seccion video*/
+
+.video-section {
+  background: linear-gradient(135deg, #2611e9, #7056e5);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.video-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.video-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.video-card {
+  background: white;
+  color: #333;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-card h3 {
+  font-size: 1.1rem;
+  margin: 15px 15px 5px;
+}
+
+.video-card span {
+  display: block;
+  margin: 0 15px 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/*adicionales*/
+.custom-card {
+  background: rgba(255, 255, 255, 0.75);
+  border: none;
+  border-radius: 2rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card-icon {
+  font-size: 3rem;
+}
+
+.cta-button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
 }

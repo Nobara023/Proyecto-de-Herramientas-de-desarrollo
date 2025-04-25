@@ -1,49 +1,84 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noticias sobre Suplantación de Identidad en Perú</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noticias sobre Suplantación de Identidad</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1400&q=80');
+      background: url('https://images.unsplash.com/photo-1607083206173-f236a97b77ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
     }
-
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(15, 23, 42, 0.85); /* oscurecer para legibilidad */
+      background: rgba(0, 0, 0, 0.85);
       z-index: -1;
-    }
-
-    .blue { background-color: #00a7e1; color: white; }
-    .green { background-color: #00c3a5; color: white; }
-    .purple { background-color: #6f2da8; color: white; }
-
-    body.dark {
-      background-color: #0f172a;
-      color: #f1f5f9;
     }
   </style>
 </head>
-<body class="min-h-screen text-gray-900 dark:text-white transition-colors duration-300">
-    <div class="max-w-6xl mx-auto px-4 py-8">
-      <div class="flex justify-between items-center mb-6">
-        <h1 class="text-4xl font-bold blue p-2 rounded-2xl">🛡️ Suplantación de Identidad en Perú</h1>
-      <div id="news-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Noticias dinámicas aquí -->
-      </div>
-    </div>
+<body class="text-white font-sans">
 
+  <!-- NAVBAR -->
+  <nav class="w-full bg-black bg-opacity-70 px-6 py-4 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">🔐 CIBERNOTICIAS</h1>
+      <ul class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
+        <li><a href="prueba.html" class="hover:text-indigo-400">INICIO</a></li>
+        <li><a href="Noticias.html" class="hover:text-indigo-400">NOTICIAS</a></li>
+        <li><a href="#" class="hover:text-indigo-400">CENTRO DE AYUDA</a></li>
+        <li><a href="#" class="hover:text-indigo-400">FORO</a></li>
+        <li><a href="#" class="hover:text-indigo-400">SOLUCIONES</a></li>
+        <li><a href="#" class="hover:text-indigo-400">CONTACTOS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="max-w-6xl mx-auto py-16 px-4">
+    <!-- SECCIÓN NOTICIAS -->
+    <section>
+      <h2 class="text-3xl font-bold text-center mb-10">📰 Últimas Noticias sobre Suplantación</h2>
+      <div id="news-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </section>
+
+    <!-- CONSEJOS -->
+    <section class="mt-20">
+      <h2 class="text-3xl font-bold text-center mb-8">🧠 Consejos para Protegerte</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-blue-500 bg-opacity-90 p-6 rounded-xl shadow-md">🔒 No compartas información personal en redes ni llamadas.</div>
+        <div class="bg-green-500 bg-opacity-90 p-6 rounded-xl shadow-md">📲 Usa la verificación en dos pasos en tus cuentas.</div>
+        <div class="bg-purple-500 bg-opacity-90 p-6 rounded-xl shadow-md">👀 Revisa tus estados de cuenta frecuentemente.</div>
+        <div class="bg-red-500 bg-opacity-90 p-6 rounded-xl shadow-md">⚠️ Reporta cualquier actividad sospechosa de inmediato.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- BOTÓN SUBIR -->
+  <button onclick="scrollToTop()" class="fixed bottom-6 right-6 bg-indigo-600 hover:bg-indigo-800 text-white rounded-full p-4 shadow-lg transition transform hover:scale-110">
+    ⬆️
+  </button>
+
+ <footer class="bg-dark text-white py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-1">© 2025 Identidad Segura Perú. Todos los derechos reservados.</p>
+    <p class="mb-0">Desarrollado como parte del proyecto universitario - ITRC Clone</p>
+    <div class="social-icons mt-2">
+      <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</footer>
+
+  <!-- SCRIPT -->
   <script>
     const noticias = [
-      {
+    {
         titulo: "Cliente del BCP en Ayacucho denuncia suplantación de identidad para solicitar créditos",
         resumen: "Félix Vila Galindo fue víctima de fraude donde se solicitaron dos créditos a su nombre utilizando sus datos biométricos. El BCP aún no le brinda una solución.",
         imagen: "https://elbuho.pe/wp-content/uploads/2020/03/BCP.jpg",
@@ -101,27 +136,27 @@
 
     function renderNoticias() {
       const container = document.getElementById('news-container');
-      container.innerHTML = "";
-      noticias.forEach((noticia) => {
+      noticias.forEach(noticia => {
         const card = document.createElement('div');
-        card.className = "bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300";
+        card.className = "bg-white bg-opacity-90 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1";
         card.innerHTML = `
-          <img src="${noticia.imagen}" alt="Imagen noticia" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h2 class="text-xl font-semibold mb-2">${noticia.titulo}</h2>
-            <p class="text-sm mb-4">${noticia.resumen}</p>
-            <a href="${noticia.enlace}" target="_blank" class="text-indigo-500 hover:underline font-medium">Leer más →</a>
+          <img src="${noticia.imagen}" class="w-full h-48 object-cover" />
+          <div class="p-4 text-gray-800">
+            <h3 class="font-bold text-lg mb-2">${noticia.titulo}</h3>
+            <p class="text-sm mb-3">${noticia.resumen}</p>
+            ${noticia.enlace ? `<a href="${noticia.enlace}" target="_blank" class="text-indigo-700 hover:underline font-semibold">Leer más</a>` : ""}
           </div>
         `;
         container.appendChild(card);
       });
     }
 
-    function toggleDark() {
-      document.body.classList.toggle('dark');
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     renderNoticias();
   </script>
 
-
+</body>
+</html>
