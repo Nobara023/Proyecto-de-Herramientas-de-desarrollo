@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soluciones - Prevenir el Robo de Identidad</title>
+  <link rel="stylesheet" href="../CSS/Contactanos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('https://images.unsplash.com/photo-1607083206173-f236a97b77ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.932);
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+     <!-- NAVBAR -->
+  <nav class="w-full bg-black bg-opacity-70 px-6 py-4 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">🔐 CIBERNOTICIAS</h1>
+      <ul class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
+        <li><a href="Index.html" class="hover:text-indigo-400">INICIO</a></li>
+        <li><a href="Noticias.html" class="hover:text-indigo-400">NOTICIAS</a></li>
+        <li><a href="#" class="hover:text-indigo-400">CENTRO DE AYUDA</a></li>
+        <li><a href="#" class="hover:text-indigo-400">FORO</a></li>
+        <li><a href="Soluciones.html" class="hover:text-indigo-400">SOLUCIONES</a></li>
+        <li><a href="Contactanos.html" class="hover:text-indigo-400">CONTACTOS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="page-title">
+                <h1>CONTACTANOS</h1>
+            </div>
+            <div class="page-description">
+            </div>
+
+                <!-- Formulario de contacto -->
+                <div class="contact-form">
+                    <h2>Envíanos un mensaje</h2>
+                    <form th:action="@{/contactoRegister}" method="post">
+                        <label for="nombre">Nombres y Apellidos:</label>
+                        <input type="text" id="nombre" name="nombre" required
+                            placeholder="Ingrese su nombre y apellido" />
+
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required placeholder="Ingrese su correo personal" />
+                        </select>
+
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required
+                            placeholder="Coméntenos lo sucedido"></textarea>
+
+                        <button type="submit">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div th:include="cliente/template_header_footer.html::footer"> </div>
+
+    <script src="contacto.js"></script>
+
+</body>
+
+</html>
