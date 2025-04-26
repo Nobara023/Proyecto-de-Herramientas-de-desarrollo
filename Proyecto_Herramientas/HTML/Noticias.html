@@ -2,81 +2,145 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Noticias sobre Suplantación de Identidad</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noticias de Suplantación de Identidad</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <style>
     body {
-      background: url('https://images.unsplash.com/photo-1607083206173-f236a97b77ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-      background-size: cover;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
     }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      z-index: -1;
+    .hero-section {
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      font-size: 3rem; 
+      font-weight: 900; 
+    }
+    .navbar-brand {
+     font-size: 1.8rem; /* Aumenta el tamaño de la fuente */
+     font-weight: 900;  /* Hace la letra más gruesa */
+    }
+
+    .card-noticia {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(71, 71, 219, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+    .card-noticia:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(13, 12, 14, 0.15);
+    }
+    .card-noticia img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-noticia .card-body {
+      padding: 20px;
+    }
+    .card-noticia .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: justify;
+      color: #060606
+    }
+    .card-noticia .card-text {
+      font-size: 1rem;
+      text-align: justify;
+      color: #0c0c0c;
+    }
+    .btn-vermas {
+      background-color: #00a7e1;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-top: 15px;
+      display: inline-block;
+    }
+    .btn-vermas:hover {
+      background-color: #00c3a5;
+    }
+    .news-section {
+      margin-top: 60px;
     }
   </style>
 </head>
-<body class="text-white font-sans">
-
-  <!-- NAVBAR -->
-  <nav class="w-full bg-black bg-opacity-70 px-6 py-4 shadow-lg">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-white">🔐 CIBERNOTICIAS</h1>
-      <ul class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
-        <li><a href="prueba.html" class="hover:text-indigo-400">INICIO</a></li>
-        <li><a href="Noticias.html" class="hover:text-indigo-400">NOTICIAS</a></li>
-        <li><a href="#" class="hover:text-indigo-400">CENTRO DE AYUDA</a></li>
-        <li><a href="#" class="hover:text-indigo-400">FORO</a></li>
-        <li><a href="#" class="hover:text-indigo-400">SOLUCIONES</a></li>
-        <li><a href="#" class="hover:text-indigo-400">CONTACTOS</a></li>
-      </ul>
+<body>
+  <header id="main-header" style="background-color: #0057b8; ">
+    <div class="top-bar d-flex justify-content-between align-items-center px-4 py-2">
+      <button class="quick-exit">❌ QUICK EXIT</button>
+      <div class="right-options">
+        <a href="#" class="btn btn-danger rounded-pill me-2">Iniciar sesión</a>
+        <a href="tel:8884005530" class="btn btn-info text-white rounded-pill">Call Now 888.400.5530</a>
+      </div>
     </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-white" href="#">Identidad Segura</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav me-3">
+            <li class="nav-item"><a class="nav-link text-white" href="prueba.html">INICIO</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="Noticias.html">NOTICIAS</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">CENTRO DE AYUDA</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">FORO</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">SOLUCIONES</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">CONTACTOS</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="hero-section">
+      <p>NOTICIAS</p>
+    </div>
+  </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <main class="max-w-6xl mx-auto py-16 px-4">
-    <!-- SECCIÓN NOTICIAS -->
-    <section>
-      <h2 class="text-3xl font-bold text-center mb-10">📰 Últimas Noticias sobre Suplantación</h2>
-      <div id="news-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  <main class="container news-section">
+    <h2 class="text-center text-primary fw-bold mb-5">📰 Últimas Noticias sobre Suplantación</h2>
+    <div id="news-container" class="row g-4"></div>
+
+    <section class="mt-5">
+      <h2 class="text-center text-success fw-bold mb-4">🧠 Consejos para Protegerte</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="bg-cyan-600 bg-opacity-80 p-4 rounded shadow">🔒 No compartas información personal en redes ni llamadas.</div>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-teal-500 bg-opacity-80 p-4 rounded shadow">📲 Usa la verificación en dos pasos en tus cuentas.</div>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-indigo-600 bg-opacity-80 p-4 rounded shadow">👀 Revisa tus estados de cuenta frecuentemente.</div>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-fuchsia-600 bg-opacity-80 p-4 rounded shadow">⚠️ Reporta cualquier actividad sospechosa de inmediato.</div>
+        </div>
+      </div>
     </section>
-
-    <!-- CONSEJOS -->
-<section class="mt-20">
-  <h2 class="text-3xl font-bold text-center mb-8">🧠 Consejos para Protegerte</h2>
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-cyan-600 bg-opacity-80 p-6 rounded-xl shadow-md">🔒 No compartas información personal en redes ni llamadas.</div>
-    <div class="bg-teal-500 bg-opacity-80 p-6 rounded-xl shadow-md">📲 Usa la verificación en dos pasos en tus cuentas.</div>
-    <div class="bg-indigo-600 bg-opacity-80 p-6 rounded-xl shadow-md">👀 Revisa tus estados de cuenta frecuentemente.</div>
-    <div class="bg-fuchsia-600 bg-opacity-80 p-6 rounded-xl shadow-md">⚠️ Reporta cualquier actividad sospechosa de inmediato.</div>
-  </div>
-</section>
-
   </main>
 
-  <button onclick="scrollToTop()" class="fixed bottom-6 right-6 bg-cyan-500 hover:bg-cyan-700 text-white rounded-full p-4 shadow-lg transition transform hover:scale-110">
-    ⬆️
-  </button>
-  
-
- <footer class="bg-dark text-white py-4 mt-5">
-  <div class="container text-center">
-    <p class="mb-1">© 2025 Identidad Segura Perú. Todos los derechos reservados.</p>
-    <p class="mb-0">Desarrollado como parte del proyecto universitario - ITRC Clone</p>
-    <div class="social-icons mt-2">
-      <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
-      <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-1">© 2025 Identidad Segura Perú. Todos los derechos reservados.</p>
+      <p class="mb-0">Desarrollado como parte del proyecto universitario - ITRC Clone</p>
+      <div class="mt-2">
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-  <!-- SCRIPT -->
   <script>
     const noticias = [
     {
@@ -88,7 +152,8 @@
       {
         titulo: "Mujer detenida injustamente por suplantación de identidad en llamadas extorsivas",
         resumen: "Betzabé Verónica Borda Hurtado estuvo 10 días detenida tras ser acusada de participar en extorsiones. Descubrió que delincuentes habían sacado líneas telefónicas a su nombre.",
-        imagen: "https://peru21.pe/sites/default/efsfiles/styles/teaser/public/2024-03/3M4OICJLGBGXXOFPHI7ESRS66I.jpg?itok=jQCjR9IJ"
+        imagen: "https://peru21.pe/sites/default/efsfiles/styles/teaser/public/2024-03/3M4OICJLGBGXXOFPHI7ESRS66I.jpg?itok=jQCjR9IJ",
+        enlace: "https://www.exitosanoticias.pe/actualidad/le-robaron-mas-11-mil-soles-joven-denuncia-suplantacion-identidad-vaciado-su-cuenta-n104362"
       },
       {
         titulo: "Locutora denuncia suplantación de identidad y robo de más de S/5,000",
@@ -132,32 +197,49 @@
        imagen: "https://elcomercio.pe/resizer/v2/EKWHBHT2ZBFA3CDBIMGQNS6WB4.jpg?auth=68c32b088d6e79ddde0426ce14a25ac26eed9d54e8ee116da81909834c7f0273&width=482&height=271&quality=75&smart=true",
        enlace: "https://elcomercio.pe/lima/sucesos/facebook-poder-judicial-condena-a-mujer-por-crear-perfil-falso-en-redes-sociales-para-afectar-a-su-victima-janet-mireya-zevallos-salazar-ministerio-publico-fiscalia-suplantacion-de-identidad-ultimas-noticia/"
     },
-      
     ];
 
-    function renderNoticias() {
-      const container = document.getElementById('news-container');
-      noticias.forEach(noticia => {
-        const card = document.createElement('div');
-        card.className = "bg-white bg-opacity-90 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1";
-        card.innerHTML = `
-          <img src="${noticia.imagen}" class="w-full h-48 object-cover" />
-          <div class="p-4 text-gray-800">
-            <h3 class="font-bold text-lg mb-2">${noticia.titulo}</h3>
-            <p class="text-sm mb-3">${noticia.resumen}</p>
-            ${noticia.enlace ? `<a href="${noticia.enlace}" target="_blank" class="text-indigo-700 hover:underline font-semibold">Leer más</a>` : ""}
-          </div>
-        `;
-        container.appendChild(card);
-      });
-    }
+    const contenedor = document.getElementById("news-container");
 
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    noticias.forEach(noticia => {
+      const col = document.createElement("div");
+      col.className = "col-md-6 col-lg-4 d-flex";
 
-    renderNoticias();
+      const card = document.createElement("div");
+      card.className = "card-noticia d-flex flex-column";
+
+      const img = document.createElement("img");
+      img.src = noticia.imagen;
+      img.alt = noticia.titulo;
+
+      const cuerpo = document.createElement("div");
+      cuerpo.className = "card-body d-flex flex-column";
+
+      const titulo = document.createElement("h5");
+      titulo.className = "card-title";
+      titulo.textContent = noticia.titulo;
+
+      const resumen = document.createElement("p");
+      resumen.className = "card-text";
+      resumen.textContent = noticia.resumen;
+
+      cuerpo.appendChild(titulo);
+      cuerpo.appendChild(resumen);
+
+      if (noticia.enlace) {
+        const enlace = document.createElement("a");
+        enlace.href = noticia.enlace;
+        enlace.className = "btn-vermas";
+        enlace.textContent = "Leer más";
+        cuerpo.appendChild(enlace);
+      }
+
+      card.appendChild(img);
+      card.appendChild(cuerpo);
+      col.appendChild(card);
+      contenedor.appendChild(col);
+    });
   </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
