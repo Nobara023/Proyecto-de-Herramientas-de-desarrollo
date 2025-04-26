@@ -89,6 +89,16 @@
               respuestas rápidas y precisas.</p>
           </div>
         </div>
+        <div class="podcast-card" onclick="scrollAPasos()">
+          <img src="https://cdn-icons-png.flaticon.com/512/4576/4576426.png" alt="Podcast 3">
+          <div class="text-content">
+            <strong>
+              <h3>¿Fuiste víctima de suplantación de identidad?</h3>
+            </strong>
+            <p>Te ofrecemos una guía paso a paso para ayudarte a denunciar el incidente y proteger tu información
+              personal. </p>
+          </div>
+        </div>
         <div class="podcast-card">
           <img
             src="https://us.123rf.com/450wm/dariachekman/dariachekman1812/dariachekman181200077/115235412-icono-de-tel%C3%A9fono-rojo-plano-sobre-fondo-gris-con-sombra.jpg?ver=6"
@@ -100,24 +110,58 @@
             <p> La suplantación de identidad es un delito, y es importante denunciarlo lo antes posible..</p>
           </div>
         </div>
-        <div class="podcast-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/4576/4576426.png" alt="Podcast 3">
-          <div class="text-content">
-            <strong>
-              <h3>¿Fuiste víctima de suplantación de identidad?</h3>
-            </strong>
-            <p>Te ofrecemos una guía paso a paso para ayudarte a denunciar el incidente y proteger tu información
-              personal. </p>
-          </div>
-        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pasos-section">
+    <div class="pasos-guia">
+      <h1>📢ACTUA RAPIDO!!</h1>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-image"></div>
+        <div class="card-title">DENUNCIA EL FRAUDE</div>
+        <div class="card-text">
+        Reporta el robo de identidad en la comisaría o en la plataforma de Denuncia Policial Digital.¡Es el primer escudo legal!
         </div>
       </div>
-      </section>
-
-        <section class="pasos-section">
-          <h2>Guia paso a pasos</h2>
-          
-      </section>
+      <div class="card">
+        <div class="card-image"></div>
+        <div class="card-title">RESGUARDA TU DNI</div>
+        <div class="card-text">
+        Informa a RENIEC para bloquear o actualizar tu documento y evitar que lo sigan usando sin tu permiso.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image"></div>
+        <div class="card-title">ALERTA A TUS BANCOS</div>
+        <div class="card-text">
+          Comunica el fraude a tus bancos y operadoras telefónicas para bloquear cuentas y números comprometidos.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image"></div>
+        <div class="card-title">REVISA TU HISTORIAL</div>
+        <div class="card-text">
+          Solicita tu reporte de deudas en Infocorp y verifica si tienes créditos, compras o deudas que no reconoces.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image"></div>
+        <div class="card-title">REFUERZA TU SEGURIDAD</div>
+        <div class="card-text">
+          Cambia contraseñas, activa doble verificación y mantente alerta a movimientos sospechosos en tus datos.
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function scrollAPasos() {
+      const seccionPasos = document.querySelector('.pasos-section');
+      seccionPasos.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 
 </body>
 
