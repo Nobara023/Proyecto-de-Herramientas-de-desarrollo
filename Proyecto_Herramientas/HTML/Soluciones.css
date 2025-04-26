@@ -181,6 +181,15 @@
     object-fit: cover;
   }
   
+  .pasos-section {
+    background: linear-gradient(135deg, #2611e9, #7056e5);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  
+  
 /* Responsive */
 @media (max-width: 768px) {
     .consejos {
