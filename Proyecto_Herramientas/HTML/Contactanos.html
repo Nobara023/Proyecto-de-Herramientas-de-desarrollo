@@ -22,14 +22,15 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 255, 255, 0.932);
+      background: rgba(24, 128, 177, 0.932);
       z-index: -1;
     }
   </style>
 </head>
 
-<body>
-     <!-- NAVBAR -->
+<body class="text-white font-sans">
+
+  <!-- NAVBAR -->
   <nav class="w-full bg-black bg-opacity-70 px-6 py-4 shadow-lg">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold text-white">🔐 CIBERNOTICIAS</h1>
@@ -43,42 +44,20 @@
       </ul>
     </div>
   </nav>
-
-    <section id="contacto" class="contact">
-        <div class="container">
-            <div class="page-title">
-                <h1>CONTACTANOS</h1>
-            </div>
-            <div class="page-description">
-            </div>
-
-                <!-- Formulario de contacto -->
-                <div class="contact-form">
-                    <h2>Envíanos un mensaje</h2>
-                    <form th:action="@{/contactoRegister}" method="post">
-                        <label for="nombre">Nombres y Apellidos:</label>
-                        <input type="text" id="nombre" name="nombre" required
-                            placeholder="Ingrese su nombre y apellido" />
-
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" required placeholder="Ingrese su correo personal" />
-                        </select>
-
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required
-                            placeholder="Coméntenos lo sucedido"></textarea>
-
-                        <button type="submit">Enviar mensaje</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div th:include="cliente/template_header_footer.html::footer"> </div>
-
-    <script src="contacto.js"></script>
-
-</body>
-
-</html>
+  <div class="container-form">
+    <div class="info-form">
+        <h2>Contáctanos</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eligendi est voluptates quae ipsam eius, in quasi odio porro aut vel beatae aperiam.</p>
+        <a href="#"><i class="fa fa-phone"></i> 123-456-789</a>
+        <a href="#"><i class="fa fa-envelope"></i> email@tudominio.com</a>
+        <a href="#"><i class="fa fa-map-marked"></i> Ciudad, Pais</a>
+    </div>
+    <form action="#" autocomplete="off">
+        <input type="text" name="nombre" placeholder="Tu Nombre" class="campo">
+        <input type="emal" name="email" placeholder="Tu Email" class="campo">
+        <textarea name="mensaje" placeholder="Tu Mensaje..."></textarea>
+        <input type="submit" name="enviar" value="Enviar Mensaje" class="btn-enviar">
+    </form>
+</div>
+  </body>
+  </html>
