@@ -34,6 +34,10 @@ body {
   .servicebox-section {
       margin-bottom: 100px;
       margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Asegura que las cajas se acomoden en varias filas si es necesario */
+      gap: 20px; /* Añade espacio entre las cajas */
   }
   
   .servicebox-section .box {
@@ -225,3 +229,8 @@ body {
     color: white;
   }
   
+  footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
