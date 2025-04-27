@@ -2,31 +2,67 @@ body {
     background-color: #0a1f44;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .background-hero {
+    background-image: url('../images/fondo-centro-ayuda.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+  
+  header {
+    background-color: transparent;
+    /*background-color: rgba(0, 0, 0, 0.4);*/
+    color: white;
+    padding-bottom: 50px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
 }
 
-.foro-container {
+  .quick-exit {
+    background-color: #e30c2f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+  .hero-section {
+    padding: 80px 20px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  
+  .foro-container {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-}
-
-.comentario {
+  }
+  .comentario {
     background-color: #1c2b4d;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-}
-
-.comentario .usuario {
+  }
+  .comentario .usuario {
     font-weight: bold;
-}
-
-.comentario .fecha {
+  }
+  .comentario .fecha {
     font-size: 0.8em;
     color: #718096;
-}
-
-.formulario-comentario {
+  }
+  .formulario-comentario {
     background-color: #1c2b4d;
     border-radius: 8px;
     padding: 20px;
@@ -35,44 +71,37 @@ body {
     opacity: 0;
     transform: translateY(-20px);
     transition: all 0.5s ease;
-}
-
-.formulario-comentario.mostrar {
+  }
+  .formulario-comentario.mostrar {
     display: block;
     opacity: 1;
     transform: translateY(0);
-}
-
-.formulario-comentario input,
-.formulario-comentario textarea {
+  }
+  .formulario-comentario input,
+  .formulario-comentario textarea {
     background-color: #2d3748;
     color: #ffffff;
     border: none;
-}
-
-.formulario-comentario input::placeholder,
-.formulario-comentario textarea::placeholder {
+  }
+  .formulario-comentario input::placeholder,
+  .formulario-comentario textarea::placeholder {
     color: #a0aec0;
-}
-
-.btn-enviar {
+  }
+  .btn-enviar {
     background-color: #2b6cb0;
     color: #ffffff;
     border: none;
-}
-
-.btn-enviar:hover {
+  }
+  .btn-enviar:hover {
     background-color: #2c5282;
-}
-
-.btn-toggle-form {
+  }
+  .btn-toggle-form {
     background-color: #38b2ac;
     color: #ffffff;
     border: none;
     margin-bottom: 30px;
     margin-top: 20px;
-}
-
-.btn-toggle-form:hover {
+  }
+  .btn-toggle-form:hover {
     background-color: #319795;
-}
+  }
