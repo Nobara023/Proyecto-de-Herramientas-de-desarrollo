@@ -1,8 +1,9 @@
 body {
-    background-color: #0a1f44;
+    background-color: #ffffff;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
+  /* Fondo solo hasta hero-section */
   .background-hero {
     background-image: url('../images/fondo-centro-ayuda.png');
     background-size: cover;
@@ -13,7 +14,6 @@ body {
   
   header {
     background-color: transparent;
-    /*background-color: rgba(0, 0, 0, 0.4);*/
     color: white;
     padding-bottom: 50px;
     position: relative;
@@ -50,7 +50,7 @@ body {
     padding: 20px;
   }
   .comentario {
-    background-color: #1c2b4d;
+    background: linear-gradient(135deg, #259ebc 0%, #4a9fe9 90%);
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
@@ -62,8 +62,31 @@ body {
     font-size: 0.8em;
     color: #718096;
   }
+
+  .usuario-box {
+    min-width: 150px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .usuario-box i {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  
+  .contenido-box {
+    padding-left: 15px;
+  }
+  
   .formulario-comentario {
-    background-color: #1c2b4d;
+    background: linear-gradient(135deg, #259ebc 0%, #1c3d8c 90%);
     border-radius: 8px;
     padding: 20px;
     margin-top: 20px;
@@ -79,8 +102,8 @@ body {
   }
   .formulario-comentario input,
   .formulario-comentario textarea {
-    background-color: #2d3748;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     border: none;
   }
   .formulario-comentario input::placeholder,
@@ -88,20 +111,20 @@ body {
     color: #a0aec0;
   }
   .btn-enviar {
-    background-color: #2b6cb0;
+    background-color: #4b83beba;
     color: #ffffff;
     border: none;
   }
   .btn-enviar:hover {
-    background-color: #2c5282;
+    background-color: #497dbd;
   }
   .btn-toggle-form {
-    background-color: #38b2ac;
+    background-color: #259ebc;
     color: #ffffff;
     border: none;
     margin-bottom: 30px;
     margin-top: 20px;
   }
   .btn-toggle-form:hover {
-    background-color: #319795;
+    background-color: #479cb1;
   }
