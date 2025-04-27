@@ -4,24 +4,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    padding-bottom: 50px;
-    position: relative;
-    z-index: 10;
-}
-
-.quick-exit {
-    background-color: #e30c2f;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
 .foro-container {
     max-width: 800px;
     margin: 40px auto;
