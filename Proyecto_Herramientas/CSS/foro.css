@@ -61,12 +61,12 @@ header {
 }
 
 .comentario {
-    background: linear-gradient(135deg, #7e5dc6, #8cc9f0);
-    color: #ffffff;
+    background: #8cc9f0;
+    color: #0a0a0a;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #ffffff;
+   
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.453);
 }
@@ -77,7 +77,7 @@ header {
     border-radius: 8px;
     padding: 10px;
     text-align: center;
-    color: #ffffff;
+    color: #373535;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,8 +127,8 @@ header {
 
 .formulario-comentario input,
 .formulario-comentario textarea {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #eae6e6;
+    color: #060606;
     border: none;
 }
 
@@ -153,9 +153,13 @@ header {
     border: none;
     margin-bottom: 30px;
     margin-top: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.199);
+    box-shadow: 0 2px 4px rgba(43, 41, 41, 0.199);
 }
 
 .btn-toggle-form:hover {
     background-color: #2573bc;
+}
+.btn-sm{
+    background-color: #f6f6f9;
+    color: #121213;
 }
