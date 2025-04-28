@@ -99,7 +99,7 @@
               personal. </p>
           </div>
         </div>
-        <div class="podcast-card">
+        <div class="podcast-card" onclick="scrollAContactOptions()">
           <img
             src="https://us.123rf.com/450wm/dariachekman/dariachekman1812/dariachekman181200077/115235412-icono-de-tel%C3%A9fono-rojo-plano-sobre-fondo-gris-con-sombra.jpg?ver=6"
             alt="Llamar">
@@ -156,12 +156,60 @@
       </div>
     </div>
   </section>
+
+  <section class="contact-options">
+    <div class="option">
+      <div class="icon2"><i class="fa-solid fa-comment"></i></div>
+      <h2>  <strong>Charlar</strong></h2>  <br>
+      <p> Contactanos y recibe atención personalizada.<br> Estamos aquí para ayudarte y orientarte si estás enfrentando una situación de suplantación de identidad.</p>
+    </div>
+  
+    <div class="option">
+      <div class="icon2"><i class="fa-solid fa-phone"></i></div>
+      <h2><strong>Llamar</strong></h2>  <br>
+      <p>📌Policía Nacional del Perú (PNP): 105</p><br>
+      <p>📌Investigación de Ciberdelincuencia:  942439245 </p>
+
+
+      </p>
+    </div>
+  
+    <div class="option">
+      <div class="icon2"><i class="fa-solid fa-envelope"></i></div>
+      <h2><strong>Correo</strong></h2>  <br>
+      <p>Investigación de Delitos de Alta Tecnología:</p>
+      <p>📌divindat.depcpi@policia.gob.pe</p>
+      <br>
+      <p>Autoridad Nacional de Protección de Datos:</p>
+      <p>📌protegetusdatos@minjus.gob.pe</p>
+    </div>
+  </section>
+  
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-1">© 2025 Identidad Segura Perú. Todos los derechos reservados.</p>
+      <p class="mb-0">Desarrollado como parte del proyecto universitario - ITRC Clone</p>
+      <div class="social-icons mt-2">
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+  
   <script>
     function scrollAPasos() {
       const seccionPasos = document.querySelector('.pasos-section');
       seccionPasos.scrollIntoView({ behavior: 'smooth' });
     }
-  </script>
+    
+    function scrollAContactOptions() {
+      const contactSection = document.querySelector('.contact-options');
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    </script>    
+    
 
 </body>
 

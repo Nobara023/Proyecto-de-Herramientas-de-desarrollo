@@ -75,9 +75,8 @@
 
 .consejo-titulo h2 {
     font-size: 28px;
-    /* Aumentado */
     font-weight: 700;
-    /* Más negrita */
+
 }
 
 .consejo-texto {
@@ -103,9 +102,9 @@
     font-size: 16px;
 }
 
-/* LLama */
+/* LLama chat y guia */
 .podcast-section {
-    background-color: #ffffff; /* azul fuerte como en la imagen */
+    background-color: #ffffff; 
     padding: 80px 20px;
     color: rgb(0, 0, 0);
   }
@@ -184,7 +183,6 @@
   /*GUIA*/
   .pasos-section {
     background:  linear-gradient(to bottom, rgb(124, 47, 248), rgb(158, 42, 224));
-    color: white;
     padding: 60px 20px;
     text-align: center;
   }
@@ -193,11 +191,11 @@
     font-weight: 800;
     margin-bottom: 20px;
   }
-  
+  /*LLAMAR 2*/
+  .llama-section{
+    background: #fff;
 
-
-
-
+  }
 
 /* TARJETAS DE GUIA*/
   .card-container{
@@ -272,4 +270,54 @@
         flex-direction: column;
         text-align: center;
     }
+}
+
+
+
+
+.contact-options {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 40px 20px;
+  gap: 20px;
+  font-size: 30px;
+    margin: 0;
+}
+
+.option {
+
+  flex: 1;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px;
+  border-right: 2.5px solid #389440;
+  
+}
+
+.option:last-child {
+  border-right: none;
+}
+
+.icon2 {
+    font-size: 50px;
+    background-color: #4dc957;;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
