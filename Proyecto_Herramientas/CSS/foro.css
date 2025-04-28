@@ -1,6 +1,9 @@
 body {
-    background-color: #ffffff;
-    color: #ffffff;
+    background-image: url('../images/fondo.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
